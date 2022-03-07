@@ -4,10 +4,17 @@ using namespace std;
 
 int main()
 {
-    cout << "There once was a man named George" << endl;
-    cout << "He was 70 years old" << endl;
-    cout << "He liked the name George" << endl;
-    cout << "But did not like being 70" << endl;
+    string characterName = "John";
+    int characterAge = 70;
+
+    cout << "There once was a man named " << characterName << endl;
+    cout << "He was " << characterAge << " years old" << endl;
+
+    characterName = "Mike";
+    characterAge = 80;
+
+    cout << "He liked the name " << characterName << endl;
+    cout << "But did not like being " << characterAge << endl;
 
 
 
