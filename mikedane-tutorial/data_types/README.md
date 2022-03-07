@@ -12,3 +12,21 @@ With these three fundamental types of data, we can keep track of almost anything
 
 ***You always want to be aware of what data types you're using when writing a program that's keeping track of different pieces of information.***
 
+#### Looking at the different data types ####
+- `char` - create a variable with a **single character**. Always use `'single qoutations'` when creating *char variables*.
+- `string` - variable with a string of characters.  Always use `"double qoutations"` when creating *string variables*.
+- `int` - variables that are integers
+- `float` - can hold 7 decimal places 
+- `double` - can hold 15 decimal places
+- `bool` - variables that are **true** or **false**
+
+#### Taking a deeper look into data types ####
+- You can assign the type of integer:
+  - `short` -> at least 16-bits signed integer
+  - `int` -> at least 16-bits signed integer *(but not smaller than short)*
+  - `long` -> at least 32-bits signed integer
+  - `long long` -> at least 64-bit signed integer
+- You can also assign the type of float
+  - `float` -> single precision floating point
+  - `double` -> double-precision floating point
+  - `long double` -> extended-precision floating point
