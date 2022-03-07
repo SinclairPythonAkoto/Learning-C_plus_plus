@@ -30,3 +30,7 @@ With these three fundamental types of data, we can keep track of almost anything
   - `float` -> single precision floating point
   - `double` -> double-precision floating point
   - `long double` -> extended-precision floating point
+
+#### Printing true or false booleans ####
+- printing `true` on the terminal will return `1`
+- printing `false` on the terminal will return `0`
