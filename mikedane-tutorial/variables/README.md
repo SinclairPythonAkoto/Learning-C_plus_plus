@@ -4,6 +4,7 @@ Variables are essentially containers which allow a program to store different pi
 
 
 #### Rules for variables ####
+- We need to tell C++ what **type** of variable we are creating *(boolean, integer, string etc)*
 - Names are case-sensitive so they should begin with:
   - **letters** or **underscore_**
 - After, teh characters can be:
