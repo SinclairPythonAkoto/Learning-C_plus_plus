@@ -11,3 +11,10 @@ There are 3x main key words when using if statements:
 - `||` - or operator *(only one condition needs to be true)*
 - `!` - negation operator *(place this before the condition to negate it)*
 
+#### Comparison operators ####
+- `>` - greater than 
+- `<` - less than 
+- `>=` - greater or equal to
+- `<=` - less or equal to 
+- `!=` - not equal to 
+- `==` - equal to 
