@@ -25,3 +25,5 @@ int addNumbers(int num1, int num2){
 
 **Note**
 When using the `return` key word, if you try to write a command after the return the code will not execute.
+
+***I have added a small change where the program prompts the user for a number; the user's number is then passed to the function where it is multiplied to the power of 3.***
