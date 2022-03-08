@@ -84,7 +84,7 @@ cout << num << endl;   // 90
 
 ```
 int num = 100;
-num `*= 10`;
+num *= 10;
 
 cout << num << endl;   // 1000
 ```
@@ -106,11 +106,9 @@ cout << 10.7 + 5 << endl;   // 15.7
 ```
 
 ### Using math funtions ###
-We can import some math functions into our C++ file by adding `#include <cmath>` at the top of our file.  This allows us to use functions like `pow()` & `sqrt()`.
+We can import some math functions into our C++ file by adding `#include <cmath>` at the **top** of our file.  This allows us to use functions like `pow()` & `sqrt()`.
 
-`pow()`
-- The *power of..*
-- This essentially takes in 2x arguments and calculates the *first* argument to the power of the *second* arguement.
+`pow()` is the function to find *power of* a given number.   This essentially takes in 2x arguments and calculates the *first* argument to the power of the *second* arguement.
 
 ```
 #include <iostream>
@@ -132,3 +130,4 @@ cout << floor(4.8) << endl;   // forcibly round down = 4
 cout << fmax(3, 10) << endl;  // find max number = 10
 cout << fmin(3, 10) << endl;  // find min number = 3
 ```
+***There are many many more useful math functions that you can utilise with your C++ programs, these are just a few of the basics.  As you get more comfortable with C++ and build more complex programs, I am sure you will be using some more complex math functions!***
