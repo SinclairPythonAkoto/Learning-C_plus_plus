@@ -84,7 +84,7 @@ cout << num << endl;   // 90
 
 ```
 int num = 100;
-num *= 10;
+num `*= 10`;
 
 cout << num << endl;   // 1000
 ```
