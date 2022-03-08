@@ -13,5 +13,6 @@ This is esentially the configuration options for the C++ file.  This needs to be
 
 We have created a function `int main()` which will be used to contain the C++ code in which we want to execute.
 
-- `cout` - console output
+- `cout` - console output / character output
 - `endl` - end line
+- Always end each line with a semicolon `;`
