@@ -1,8 +1,6 @@
 # Building A Hotel Management System #
 
-*Source:*
-
-**https://www.youtube.com/watch?v=HarwDzStkLY**
+**Source:** [Simplilearn](https://www.youtube.com/watch?v=HarwDzStkLY)
 
 ### Project Objective ###
 - Have information of the items for sale and the amount of availabe rooms in the hotel.
