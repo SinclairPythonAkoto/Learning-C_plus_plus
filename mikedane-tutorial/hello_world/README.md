@@ -14,10 +14,10 @@ This is esentially the configuration options for the C++ file.  This needs to be
 
 The `#include` is used for when we want to import a library or configuraton.  
 
-**Remember, to use** `cin` **or** `cout` **you will need to use** `std::`**!**
-
 #### Using namespace std; ####
 This again has been used throughout the tutorial, but the **proper** way would be to ignore this line and when printing to the console to use this key word instead `std::`
+
+**Remember, to use** `cin` **or** `cout` **you will need to use** `std::`**!**
 
 #### int main() ####
 You can create your functions and classes out of the `main()` method, but when you want to run your code ***all functions, classes and your code should be in the main method!!*** *This is because C++ runs the main method first before anything else!*
