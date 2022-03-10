@@ -50,7 +50,7 @@ Movie(string title, string rating){
 
 ```
 void setRating(string rating){
-    if(rating == "G" || rating == "PG" || rating == "PG-13" || rating == "R" || rating == "NR" || ){
+    if(rating == "G" || rating == "PG" || rating == "PG-13" || rating == "R" || rating == "NR"){
         this->rating = rating;
      } else {
          this->rating = "NR";
