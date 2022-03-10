@@ -9,12 +9,12 @@ using namespace std;
 ```
 This is esentially the configuration options for the C++ file.  This needs to be included to be able to run our program.
 
-#### <iostream> ####
+#### iostream ####
 `<iostream>` stands for the **input & output stream**.  This basically allows you to print onto the console as well as take in data from the console *(like a user input)*.  For the purpose of this tutorial we have used this throughout because we have been printing back onto the terminal; but as you develop yourself into a more advanced developer, you will be writing C++ code that may not necessarily need to print to the console or take in a user input.
 
-**Remember, to use** `cin` **or** `cout` **you will need to use** `std::`**!**
-
 The `#include` is used for when we want to import a library or configuraton.  
+
+**Remember, to use** `cin` **or** `cout` **you will need to use** `std::`**!**
 
 #### Using namespace std; ####
 This again has been used throughout the tutorial, but the **proper** way would be to ignore this line and when printing to the console to use this key word instead `std::`
