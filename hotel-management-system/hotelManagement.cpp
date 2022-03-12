@@ -23,7 +23,7 @@ int main()
 	int soldRooms=0, soldPasta=0, soldBurger=0, soldNoodles=0, soldShake=0, soldChicken=0;
 
 	// store total price of rooms and items bought by customers
-	int totalRooms=0, totalPasta=0, totalBurger=0, totalNoodles=0, totalShake=0, totalChicken=0;
+	double totalRooms=0, totalPasta=0, totalBurger=0, totalNoodles=0, totalShake=0, totalChicken=0;
 
 
 	/* 
@@ -51,6 +51,7 @@ int main()
 	   This is for the customers to choose from. 
 	   Option 7 is for the owner of the hotel.
 	 */
+    menu:
 	cout << "\n\n\n\t\t\t Paradise Hotel Menu " << endl;
 	cout << "\n\t\t\t Please select from  the menu options: " << endl;
 	cout << "\n\n1) Rooms";
@@ -77,19 +78,19 @@ int main()
 			cout << "\n\n Enter the number of rooms you want: ";
 			cin >> quantity;
 
-			// check if the room is available
-			if(quantityRooms - soldRooms >= quantity)
-			{
-				// update the room itinerary
-				soldRooms = soldRooms + quantity;
-				totalRooms = totalRooms + quantity * roomPrice;
-				cout << "\n\n\t\t" << quantity << " room(s) have been allocated to you." << endl;
-			}
-			// if there no avaialable rooms left
-			else {
-				cout << "\n Only " << quantityRooms - soldRooms << " available rooms are left in the hotel." << endl;
-				break;
-			}
+		// check if the room is available
+		if(quantityRooms - soldRooms >= quantity)
+		{
+
+		// update the room itinerary
+		soldRooms = soldRooms + quantity;
+		totalRooms = totalRooms + quantity * roomPrice;
+		cout << "\n\n\t\t" << quantity << " room(s) has been allocated to you." << endl;
+        }
+		// if there no avaialable rooms left
+		else 
+			cout << "\n Only " << quantityRooms - soldRooms << " available rooms are left in the hotel." << endl;
+            break;
 
 		case 2:
 			cout << "\n\n Enter the amount of pasta bakes you would like to order: ";
@@ -99,43 +100,119 @@ int main()
 			{
 				soldPasta = soldPasta + quantity;
 				totalPasta = totalPasta + quantity * pastaPrice;
-				cout << "\n\n\t\t" << quantity << " pasta bake(s) have been ordered for you." << endl;
+				cout << "\n\n\t\t" << quantity << " pasta bake(s) has been ordered for you." << endl;
 			}
-			else {
+			else 
 				cout << "\n Only " << quantityPasta - soldPasta << " pasta bake(s) are available to order." << endl;
 				break;
-			}
 
 		case 3:
-			cout << "\n\n\t\t Enter the amount of burgers you would like to order: ";
+			cout << "\n\n Enter the amount of burgers you would like to order: ";
 			cin >> quantity;
 
 			if(quantityBurger - soldBurger >= quantity)
 			{
 				soldBurger = soldBurger + quantity;
 				totalBurger = totalBurger + quantity * burgerPrice;
-				cout << "\n\n\t\t" << quantity << " burger(s) have been ordered for you." << endl;
+				cout << "\n\n\t\t" << quantity << " burger(s) has been ordered for you." << endl;
 			}
-			else {
+			else
 				cout << "\n Only " << quantityBurger - soldBurger << " burger(s) are available to order." << endl;
 				break;
-			}
 
 		case 4:
-			cout << "\n\n\t\t Enter the amount of noodles you would like to order: ";
+			cout << "\n\n Enter the amount of noodles you would like to order: ";
 			cin >> quantity;
 
 			if(quantityNoodles - soldNoodles >= quantity)
 			{
 				soldNoodles = soldNoodles + quantity;
 				totalNoodles = totalNoodles + quantity * noodlesPrice;
-				cout << "\n\n\t\t" << quantity << " plate(s) of noodles have been ordered for you." << endl;
+				cout << "\n\n\t\t" << quantity << " plate(s) of noodles has been ordered for you." << endl;
 			}
-			else {
+			else
 				cout << "\n Only " << quantityNoodles - soldNoodles << " plate(s) of noodles are available to order." << endl;
 				break;
-			}
-	}
 
-	return 0;
+		case 5:
+			cout << "\n\n Enter the amount of milkshake(s) you would like to order: ";
+			cin >> quantity;
+
+			if(quantityShake - soldShake >= quantity)
+			{
+				soldShake = soldShake + quantity;
+				totalShake = totalShake + quantity * shakePrice;
+				cout << "\n\n\t\t" << quantity << " milkshak(s) has been ordered for you." << endl;
+			}
+			else
+				cout << "\n Only " << quantityShake - soldShake << " milkeshake(s) are available to order." << endl;
+				break;
+
+		case 6:
+			cout << "\n\n Enter the amount of chicken roll(s) you would like to order: ";
+			cin >> quantity;
+
+			if(quantityChicken - soldChicken >= quantity)
+			{
+				soldChicken = soldChicken + quantity;
+				totalChicken = totalChicken + quantity * chickenPrice;
+				cout << "\n\n\t\t" << quantity << " chicken roll(s) has been orderd for you." << endl;
+			}
+			else
+				cout << "\n Only " << quantityChicken - soldChicken << " chicken roll(s) are available to order." << endl;
+				break;
+
+			/*
+				Display the information of sales and collection.
+				How much money collected for the day, and remaining food items left in itinerary.
+			*/
+		case 7:
+			cout << "\n\t\tParadise Hotel Itinerary and Sales " << endl;
+
+			cout << "\n\n Number of rooms available at the start of day: " << quantityRooms << endl;
+			cout << "\n\n Number of rooms booked: " << soldRooms << endl;
+			cout << "\n\n Remaining rooms available for booking: " << quantityRooms - soldRooms << endl;
+			cout << "\n\n Today's intake from booked rooms: " << totalRooms << " GBP" << endl;
+
+			cout << "\n\n Number of pasta bakes available at the start of day: " << quantityPasta << endl;
+			cout << "\n\n Number of pasta bakess ordered: " << soldPasta << endl;
+			cout << "\n\n Pasta bakes remaining for the day: " << quantityPasta - soldPasta << endl;
+			cout << "\n\n Today's intake from pasta bakes: " << totalPasta << " GBP" << endl;
+
+			cout << "\n\n Number of burgers available at the start of day: " << quantityBurger << endl;
+			cout << "\n\n Number of burgers ordered: " << soldBurger << endl;
+			cout << "\n\n Burgers remaining for the day: " << quantityBurger - soldBurger << endl;
+			cout << "\n\n Today's intake from burgers: " << totalBurger << " GBP" << endl;
+
+			cout << "\n\n Number of noodle dishes available at the start of day: " << quantityNoodles << endl;
+			cout << "\n\n Number of noodle dishes ordered: " << soldNoodles << endl;
+			cout << "\n\n Noodle dishes remaining for the day: " << quantityNoodles - soldNoodles << endl;
+			cout << "\n\n Today's intake from noodle dishes: " << totalNoodles << " GBP" << endl;
+
+			cout << "\n\n Number of milkshakes available at the start of day: " << quantityShake << endl;
+			cout << "\n\n Number of milkshakes ordered: " << soldShake << endl;
+			cout << "\n\n Milkshakes remaining for the day: " << quantityShake - soldShake << endl;
+			cout << "\n\n Today's intake from milkshakes: " << totalShake << " GBP" << endl;
+
+			cout << "\n\n Number of chicken rolls available at the start of day: " << quantityChicken << endl;
+			cout << "\n\n Number of chiecken rolls ordered: " << soldChicken << endl;
+			cout << "\n\n Chicken rolls remaining for the day: " << quantityChicken - soldChicken << endl;
+			cout << "\n\n Today's intake from chicken rolls: " << totalChicken << " GBP" << endl;
+
+cout << "\n\n\n Hotel Paradise gross income for the day: " << totalRooms + totalPasta + totalBurger + totalNoodles + totalShake + totalChicken << " GBP" << endl;
+			break;
+
+		case 8:
+			exit(0);    // exit in 0 miliseconds
+
+		default:
+			cout << "\n Please select a valid number from the Paradise Hotel menu. " << endl;
+
+	}
+    /*
+        A jump statement allows us to jump from one part of the code to another, by using labels.
+        Use goto to jump back to the hotel menu after the user has selected their choice.
+    */
+	goto menu;
+    return 0;
 }
