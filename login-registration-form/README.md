@@ -27,7 +27,7 @@ To
 case '1':
 ```
 
-This had to be done again for the forgot function where I changed the `int option` to `char option`, and modified the swicth statements the same as above.
+This had to be done again for the `forgot()` function where I changed the `int option` to `char option`, and modified the swicth statements the same as above.
 
 If you try the program, feel free to delete the database `records.txt` file, and create your own logins!
 
