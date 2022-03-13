@@ -31,4 +31,4 @@ This had to be done again for the forgot function where I changed the `int optio
 
 If you try the program, feel free to delete the database `records.txt` file, and create your own logins!
 
-Thank you `:grinning:` `:nerd_face:`
+Thank you :grinning: :nerd_face:
