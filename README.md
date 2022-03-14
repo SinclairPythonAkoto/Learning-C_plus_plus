@@ -53,9 +53,6 @@ All C++ programs must utilize a compiler who’s job is to compile the C++ code 
 
 C++ relies on the user to manage the program’s memory, although there are garbage collectors avaiable for C++.
 
-The tutorials in which I will be learning from are from *www.mikedane.com* and *www.freecodecamp.org*.
+The tutorials in which I will be learning the basics from [Mike Dane](https://www.mikedane.com/programming-languages/c++/), then move onto learn a more detailed understanding with [freecodecamp](https://www.freecodecamp.org/news/learn-c-with-free-31-hour-course/).
 
-#### Mike Dane ####
-Source: ***https://www.mikedane.com/programming-languages/c++/***
 
-Source: ***https://www.freecodecamp.org/news/learn-c-with-free-31-hour-course/***
