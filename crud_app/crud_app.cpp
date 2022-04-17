@@ -9,6 +9,7 @@ const int maxrow = 10;  // max number of rows is 10
 string EmployeeName[maxrow] = {};
 string EmployeeID[maxrow] = {};
 
+// CREATE a new record
 void AddRecord()
 {
     char name[50];
@@ -34,6 +35,7 @@ void AddRecord()
     }
 }
 
+// READ all records
 void ListRecord()
 {
     system("clear");
@@ -61,11 +63,37 @@ void ListRecord()
     std::cout << "======================================" << endl;
 }
 
+// Search for a single record (READ)
+void SearchRecord(string search)
+{
+    system("clear");
+    std::cout << "Current Record(s)" << endl;
+    std::cout << "======================================" << endl;
+    int counter = 0;
+    for (int value = 0; value < maxrow; value++)
+    {
+        if (EmployeeID[value] == search)
+        {
+            counter++;
+            std::cout << " " << counter << "    " << EmployeeID[value] << "        " << EmployeeName[value] << endl;
+            break;
+        }
+    }
+
+    if (counter == 0)
+    {
+        std::cout << "No Record found!" << endl;
+    }
+
+    std::cout << "======================================" << endl;
+}
+
 int main()
 {
     std::cout << "MENU\n";
     int option;
-    system("clear");  // "CLS" for Windows 
+    string empID;
+    system("clear");  // "CLS" for Windows
 
     do {
         std::cout << "1 - Create Records" << endl;
@@ -82,6 +110,12 @@ int main()
         {
         case 1: AddRecord();
             system("clear");
+            break;
+        case 4:
+            std::cin.ignore();
+            std::cout << "Serach by ID >> ";
+            getline(cin, empID);
+            SearchRecord(empID);
             break;
         case 5: ListRecord();
             break;
