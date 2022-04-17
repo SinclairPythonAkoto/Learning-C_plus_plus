@@ -34,6 +34,33 @@ void AddRecord()
     }
 }
 
+void ListRecord()
+{
+    system("clear");
+    std::cout << "Current Record(s)" << endl;
+    std::cout << "======================================" << endl;
+
+    // add a counter to keep track of list entries
+    int counter = 0;
+    // creating the header
+    std::cout << "No.  |   ID   |     NAME    " << endl << "-------------------------------------\n";
+    // display values inside array
+    for (int value = 0; value < maxrow; value++)
+    {
+        if (EmployeeID[value] != "\0")
+        {
+            counter++;
+            std::cout << " " << counter << "     " << EmployeeID[value] << "         " << EmployeeName[value] << endl;
+        }
+    }
+
+    if (counter == 0)
+    {
+        std::cout << "No Record found!" << endl;
+    }
+    std::cout << "======================================" << endl;
+}
+
 int main()
 {
     std::cout << "MENU\n";
@@ -55,6 +82,8 @@ int main()
         {
         case 1: AddRecord();
             system("clear");
+            break;
+        case 5: ListRecord();
             break;
         }
     } while (option != 6);
