@@ -56,6 +56,7 @@ void ListRecord()
         }
     }
 
+    // if there is no match, counter is zero
     if (counter == 0)
     {
         std::cout << "No Record found!" << endl;
@@ -88,6 +89,38 @@ void SearchRecord(string search)
     std::cout << "======================================" << endl;
 }
 
+// UPDATE a single record
+void UpdateRecord(string search)
+{
+    char name[50];
+    char employeeNumber[5];
+    int counter = 0;
+
+    for (int value = 0; value < maxrow; value++)
+    {
+        if (EmployeeID[value] == search)
+        {
+            counter++;
+
+            std::cout << "Employee Name: ";
+            std::cin.getline(name, 50);
+
+            // new updated name stored in variable
+            EmployeeName[value] = name;
+
+            std::cout << "Update Successfull!" << endl;
+            break;
+        }
+    }
+
+    if (counter == 0)
+    {
+        std::cout << "ID does not exist!" << endl;
+    }
+}
+
+
+
 int main()
 {
     std::cout << "MENU\n";
@@ -110,6 +143,12 @@ int main()
         {
         case 1: AddRecord();
             system("clear");
+            break;
+        case 2:
+            std::cin.ignore();
+            std::cout << "Search by ID >> ";
+            getline(cin, empID);
+            UpdateRecord(empID);
             break;
         case 4:
             std::cin.ignore();
