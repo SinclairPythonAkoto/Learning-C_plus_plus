@@ -9,6 +9,30 @@ const int maxrow = 10;  // max number of rows is 10
 string EmployeeName[maxrow] = {};
 string EmployeeID[maxrow] = {};
 
+// create a FILE
+void OpenFile()
+{
+    string line;
+    ifstream myFile("employee.txt"); // "DRIVE:\\file_name.txt" in Windows
+    // check if the file is open
+    if (myFile.is_open())
+    {
+        // get data sored from each row in line variable
+        int value = 0;
+        while (getline(myFile, line))
+        {
+            int lineLength = line.length();
+            EmployeeID[value] = line.substr(0, 3);
+            EmployeeName[value] = line.substr(4, lineLength - 4); // get length of name
+            value++;
+        }
+    }
+    else
+    {
+        std::cout << "Unable to open the file!" << endl;
+    }
+}
+
 // CREATE a new record
 void AddRecord()
 {
@@ -147,6 +171,24 @@ void DeleteRecord(string search)
 }
 
 
+// SAVE records into a file
+void SaveToFile()
+{
+    ofstream myFile;
+    myFile.open("employee.txt");
+
+    for (int value = 0; value < maxrow; value++)
+    {
+        if (EmployeeID[value] == "\0")
+        {
+            break;
+        }
+        else
+        {
+            myFile << EmployeeID[value] + "," + EmployeeName[value] << endl;
+        }
+    }
+}
 
 int main()
 {
@@ -154,6 +196,7 @@ int main()
     int option;
     string empID;
     system("clear");  // "CLS" for Windows
+    OpenFile();
 
     do {
         std::cout << "1 - Create Records" << endl;
@@ -197,4 +240,7 @@ int main()
             break;
         }
     } while (option != 6);
+    SaveToFile();
+    std::cout << "Exit... Saving to file!" << endl;
+    return 0;
 }
