@@ -119,6 +119,31 @@ void UpdateRecord(string search)
     }
 }
 
+// DELETE a single record
+void DeleteRecord(string search)
+{
+    int counter = 0;
+    for (int value = 0; value < maxrow; value++)
+    {
+        if (EmployeeID[value] == search)
+        {
+            counter++;
+
+            // reset selected values to empty
+            EmployeeName[value] = "";
+            EmployeeID[value] = "";
+
+            std::cout << "Successfully Deleted!" << endl;
+            break;
+        }
+    }
+
+    if (counter == 0)
+    {
+        std::cout << "ID Number does not exist!";
+    }
+}
+
 
 
 int main()
@@ -145,10 +170,19 @@ int main()
             system("clear");
             break;
         case 2:
+            // ingore or clear input buffer
             std::cin.ignore();
             std::cout << "Search by ID >> ";
             getline(cin, empID);
             UpdateRecord(empID);
+            system("clear");
+            break;
+        case 3:
+            std::cin.ignore();
+            std::cout << "Delete by ID >> ";
+            getline(cin, empID);
+            DeleteRecord(empID);
+            system("clear");
             break;
         case 4:
             std::cin.ignore();
