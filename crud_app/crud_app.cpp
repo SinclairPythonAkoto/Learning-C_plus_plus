@@ -134,13 +134,15 @@ void DeleteRecord(string search)
             EmployeeID[value] = "";
 
             std::cout << "Successfully Deleted!" << endl;
+            std::cout << "Press ENTER to continue.";
             break;
         }
     }
 
     if (counter == 0)
     {
-        std::cout << "ID Number does not exist!";
+        std::cout << "ID Number does not exist!" << endl;
+        std::cout << "Press ENTER to continue.";
     }
 }
 
@@ -182,6 +184,7 @@ int main()
             std::cout << "Delete by ID >> ";
             getline(cin, empID);
             DeleteRecord(empID);
+            std::cin.ignore();
             system("clear");
             break;
         case 4:
