@@ -55,4 +55,6 @@ Here is a list of the commom operators in C++
         The result would be:
         Division = 1
         Modulus = 43
+
+- When we check strings, C++ will compare each character for their ASCII values.
 */
