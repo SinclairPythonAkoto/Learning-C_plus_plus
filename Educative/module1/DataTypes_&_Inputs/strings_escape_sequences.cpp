@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    string text = "Hello\nmy\name\nis\nSinclair";
+    string text = "Hello\nmy\nname\nis\nSinclair";
     cout << text ;
 }
 
