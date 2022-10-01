@@ -12,8 +12,11 @@ int main() {
         }
         cout << "Buy an ice-cream" << endl;
     }
+
     cout << "Sorry we're out of ice-cream." << endl;
+
     return 0;
+
 }
 
 /*
@@ -24,4 +27,13 @@ once a particular condition evaluates to true.
     - An if condition will be normally created inside of the loop; we use the 
       break statement to exit the condition if true.  If not true, it goes 
       through the loop condition again.
+
+eg.
+    int number = 1;
+    for (number; number < 5; number++) {
+        if (number == 3) {
+            break;
+        }
+        cout << number << endl;
+
 */
