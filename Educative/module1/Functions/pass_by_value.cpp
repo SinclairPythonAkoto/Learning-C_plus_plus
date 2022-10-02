@@ -34,4 +34,5 @@ In this case we are passing a copy of the variable to the function as an
 formal parameter.
     - This means that the actual parameter / argument in the main function is not changed
     - In C++, by default actual parameters are passed by value into the function
+    - The actual & formal parameters are stored in different memory locations.
 */
