@@ -35,6 +35,11 @@ based on the number of parameters or their types.
 
 In the code block above we are using a pointer method which we will take a closer 
 look into later in the module.
+    - strcmp is a built-in C++ function that compares two strings.
+        - It compares the first character of each string. If they
+          are equal to each other, it continues with the following
+          pairs until the characters differ or a null-character is reached.
+        - To used import by => #include <string.h>
 
 Rules for choosing the right function
     - We need to search for a function with the exact type
