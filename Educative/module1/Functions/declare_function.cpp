@@ -1,13 +1,14 @@
 #include <iostream>
 using namespace std;
 
+// function declaration
+int make_juice(int water_glass, int fruit);
+
+// another way to declare a function
+int make_juice2(int, int);
+
 int main() {
     cout << "\t\t\tDeclaring a function" << endl;
-    // function declaration
-    int make_juice(int water_glass, int fruit);
-
-    // another way to declare a function
-    int make_juice2(int, int);
 
     return 0;
 }
@@ -30,5 +31,5 @@ When creating a function we have to include:
     - The return type of the function
     - The function name 
     - The number of parameters and their data types
-    
+    - We declare the function above the main function.
 */
