@@ -36,4 +36,8 @@ keep on executing its command until the condition is met.
         to return the result it will start from the last recursive value then work
         its way backwards (to its first recursive case), getting each value along its way
 
+Why use recursion:
+    - Easy to debug problems with (divide and conquer rule!)
+    - Helps to write shorter code
+    - We can convert loops into recursive functions
 */
