@@ -39,6 +39,6 @@ Recursion is when a function repeats itself until a condition is met.
     - The function will complete its process, then retun the same function
       with the result as a parameter.
     - The function will continue this process until a condition is met,
-      this condition is known as the base plate.
+      this condition is known as the base case.
 
 */
